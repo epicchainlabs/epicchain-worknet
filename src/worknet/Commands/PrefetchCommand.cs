@@ -2,9 +2,9 @@ using System.Diagnostics;
 using System.IO.Abstractions;
 using McMaster.Extensions.CommandLineUtils;
 using EpicChain.BlockchainToolkit.Persistence;
-using NeoWorkNet.Node;
+using EpicChainWorknet.Node;
 
-namespace NeoWorkNet.Commands;
+namespace EpicChainWorknet.Commands;
 
 [Command("prefetch", Description = "Fetch data for specified contract")]
 class PrefetchCommand

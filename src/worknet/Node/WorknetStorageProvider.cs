@@ -1,6 +1,6 @@
 using EpicChain.Persistence;
 
-namespace NeoWorkNet.Node;
+namespace EpicChainWorknet.Node;
 
 class WorknetStorageProvider : IStoreProvider
 {

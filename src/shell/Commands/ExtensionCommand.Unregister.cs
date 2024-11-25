@@ -1,8 +1,8 @@
 using McMaster.Extensions.CommandLineUtils;
 using System.IO.Abstractions;
-using NeoShell.Models;
+using EpicChainShell.Models;
 
-namespace NeoShell.Commands
+namespace EpicChainShell.Commands
 {
     partial class ExtensionCommand
     {

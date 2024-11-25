@@ -4,12 +4,12 @@ using System.IO.Abstractions;
 using McMaster.Extensions.CommandLineUtils;
 using EpicChain.BlockchainToolkit.Persistence;
 using Newtonsoft.Json;
-using NeoWorkNet.Node;
+using EpicChainWorknet.Node;
 using static EpicChain.BlockchainToolkit.Constants;
 using static EpicChain.BlockchainToolkit.Utility;
 using static Crayon.Output;
 
-namespace NeoWorkNet.Commands;
+namespace EpicChainWorknet.Commands;
 
 [Command("create", Description = "Create a EpicChain-Worknet branch")]
 class CreateCommand
@@ -21,7 +21,7 @@ class CreateCommand
         this.fs = fileSystem;
     }
 
-    [Argument(0, Description = "URL of Neo JSON-RPC Node. Specify MainNet, TestNet or JSON-RPC URL")]
+    [Argument(0, Description = "URL of EpicChain JSON-RPC Node. Specify MainNet, TestNet or JSON-RPC URL")]
     [Required]
     internal string RpcUri { get; } = string.Empty;
 

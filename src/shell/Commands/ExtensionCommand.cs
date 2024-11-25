@@ -1,7 +1,7 @@
 using McMaster.Extensions.CommandLineUtils;
-namespace NeoShell.Commands
+namespace EpicChainShell.Commands
 {
-    [Command("extension", Description = "Commands to manage Neo shell extensions")]
+    [Command("extension", Description = "Commands to manage EpicChain shell extensions")]
     [Subcommand(typeof(List), typeof(Register), typeof(Unregister))]
     partial class ExtensionCommand
     {

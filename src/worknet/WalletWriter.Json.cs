@@ -2,7 +2,7 @@ using EpicChain.BlockchainToolkit;
 using EpicChain.BlockchainToolkit.Models;
 using Newtonsoft.Json;
 
-namespace NeoWorkNet;
+namespace EpicChainWorknet;
 
 class JsonWalletWriter : IWalletWriter
 {

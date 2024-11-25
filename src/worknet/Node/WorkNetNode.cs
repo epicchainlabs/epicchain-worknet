@@ -20,7 +20,7 @@ using EpicChain.Wallets;
 using NeoArray = EpicChain.VM.Types.Array;
 using NeoStruct = EpicChain.VM.Types.Struct;
 
-namespace NeoWorkNet.Node;
+namespace EpicChainWorknet.Node;
 
 class WorkNetNode
 {
@@ -89,7 +89,7 @@ class WorkNetNode
 
         using var snapshot = new SnapshotCache(store.GetSnapshot());
 
-        // replace the Neo Committee with worknet consensus nodes
+        // replace the EpicChain Committee with worknet consensus nodes
         // Prefix_Committee stores array of structs containing PublicKey / vote count 
         var members = consensusAccounts.Select(a => new NeoStruct { a.GetKey().PublicKey.ToArray(), 0 });
         var committee = new NeoArray(members);

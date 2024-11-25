@@ -5,9 +5,9 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EF617EDB-69C2-4A9F-9C98-5431424E0D73}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "neoshell", "src\shell\neoshell.csproj", "{6C3E0AC7-6FEC-40D8-A795-C362BA8E144B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EpicChainShell", "src\shell\EpicChainShell.csproj", "{6C3E0AC7-6FEC-40D8-A795-C362BA8E144B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "neoworknet", "src\worknet\neoworknet.csproj", "{4A8C1D75-73B7-4344-B1F9-FA21246BED2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EpicChainWorknet", "src\worknet\EpicChainWorknet.csproj", "{4A8C1D75-73B7-4344-B1F9-FA21246BED2C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shell-ext", "shell-ext", "{D4A45E11-590E-4B9E-A928-57EAA82E4605}"
 EndProject

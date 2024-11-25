@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using McMaster.Extensions.CommandLineUtils;
 
-namespace NeoShell.Commands
+namespace EpicChainShell.Commands
 {
   [Command("transfer", Description = "Transfer asset between accounts")]
   class TransferCommand

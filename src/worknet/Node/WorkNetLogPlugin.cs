@@ -10,7 +10,7 @@ using EpicChain.SmartContract;
 using EpicChain.SmartContract.Native;
 using static Crayon.Output;
 
-namespace NeoWorkNet.Node;
+namespace EpicChainWorknet.Node;
 
 class WorkNetLogPlugin : Plugin
 {

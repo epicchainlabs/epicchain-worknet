@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace NeoShell.Models
+namespace EpicChainShell.Models
 {
   class Connections : List<Connection>
   {

@@ -1,6 +1,6 @@
 using McMaster.Extensions.CommandLineUtils;
 
-namespace NeoShell.Commands
+namespace EpicChainShell.Commands
 {
     [Command("contract", Description = "Commands to manage smart contracts")]
     [Subcommand(typeof(Run))]

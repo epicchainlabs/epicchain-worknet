@@ -1,8 +1,8 @@
 using System.IO.Abstractions;
 using McMaster.Extensions.CommandLineUtils;
-using NeoWorkNet.Node;
+using EpicChainWorknet.Node;
 
-namespace NeoWorkNet.Commands;
+namespace EpicChainWorknet.Commands;
 
 [Command("run", Description = "Run EpicChain-Worknet instance node")]
 partial class RunCommand

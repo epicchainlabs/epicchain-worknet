@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using McMaster.Extensions.CommandLineUtils;
 
-namespace NeoShell.Commands
+namespace EpicChainShell.Commands
 {
     partial class ShowCommand
     {

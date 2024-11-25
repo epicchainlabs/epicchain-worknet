@@ -3,7 +3,7 @@ using McMaster.Extensions.CommandLineUtils;
 using EpicChain.Network.P2P.Payloads;
 using EpicChain.Wallets;
 
-namespace NeoShell.Commands
+namespace EpicChainShell.Commands
 {
   partial class ContractCommand
   {

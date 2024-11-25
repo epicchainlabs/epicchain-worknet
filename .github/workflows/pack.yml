@@ -40,12 +40,12 @@ jobs:
       with:
         name: buildlog
         path: ./msbuild.binlog
-    - name: Upload NeoShell
+    - name: Upload EpicChainShell
       uses: actions/upload-artifact@v3
       with:
         name: shell
         path: ./out/EpicChain.Shell.*.nupkg
-    - name: Upload NeoWorknet
+    - name: Upload EpicChainWorknet
       uses: actions/upload-artifact@v3
       with:
         name: worknet

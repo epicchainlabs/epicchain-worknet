@@ -1,8 +1,8 @@
 using System.IO.Abstractions;
 using McMaster.Extensions.CommandLineUtils;
-using NeoWorkNet.Node;
+using EpicChainWorknet.Node;
 
-namespace NeoWorkNet.Commands;
+namespace EpicChainWorknet.Commands;
 
 [Command("reset", Description = "Reset WorkNet back to initial branch point")]
 class ResetCommand

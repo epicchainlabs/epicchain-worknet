@@ -1,8 +1,8 @@
 using System.IO.Abstractions;
 using McMaster.Extensions.CommandLineUtils;
-using NeoShell.Models;
+using EpicChainShell.Models;
 
-namespace NeoShell.Commands
+namespace EpicChainShell.Commands
 {
   [Command("connect", Description = "Connect to a network for example worknet or testnet")]
   [Subcommand(typeof(Current))]
@@ -10,7 +10,7 @@ namespace NeoShell.Commands
   {
     private readonly IFileSystem fileSystem;
 
-    [Option(Description = "Path to neo data file")]
+    [Option(Description = "Path to EpicChain data file")]
     internal string Input { get; init; } = string.Empty;
     public ConnectCommand(IFileSystem fileSystem)
     {

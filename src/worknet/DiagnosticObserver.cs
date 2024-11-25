@@ -2,7 +2,7 @@ using System.Diagnostics;
 using EpicChain.BlockchainToolkit.Models;
 using EpicChain.BlockchainToolkit.Persistence;
 
-namespace NeoWorkNet;
+namespace EpicChainWorknet;
 
 using KvpObserver = IObserver<KeyValuePair<string, object?>>;
 

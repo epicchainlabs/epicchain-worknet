@@ -12,10 +12,10 @@ using EpicChain.SmartContract.Manifest;
 using EpicChain.SmartContract.Native;
 using EpicChain.VM;
 using EpicChain.Wallets;
-using NeoShell.Commands;
-using NeoShell.Models;
+using EpicChainShell.Commands;
+using EpicChainShell.Models;
 
-namespace NeoShell.Node
+namespace EpicChainShell.Node
 {
   class OnlineNode : INode
   {

@@ -9,10 +9,10 @@ using EpicChain.Network.RPC.Models;
 using EpicChain.Persistence;
 using EpicChain.SmartContract;
 using EpicChain.Wallets;
-using NeoShell.Models;
+using EpicChainShell.Models;
 using System.Text.RegularExpressions;
 
-namespace NeoShell
+namespace EpicChainShell
 {
   static class Extensions
   {

@@ -3,7 +3,7 @@ using McMaster.Extensions.CommandLineUtils;
 using McMaster.Extensions.CommandLineUtils.Conventions;
 using static EpicChain.BlockchainToolkit.Constants;
 
-namespace NeoWorkNet;
+namespace EpicChainWorknet;
 
 partial class Program
 {

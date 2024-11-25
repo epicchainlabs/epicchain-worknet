@@ -3,7 +3,7 @@ using EpicChain;
 using EpicChain.BlockchainToolkit;
 using EpicChain.BlockchainToolkit.Models;
 
-namespace NeoShell
+namespace EpicChainShell
 {
   internal class ChainManager
   {

@@ -3,7 +3,7 @@ using EpicChain;
 using EpicChain.Json;
 using EpicChain.SmartContract.Native;
 
-namespace NeoShell.Models
+namespace EpicChainShell.Models
 {
     class PolicyValues
     {

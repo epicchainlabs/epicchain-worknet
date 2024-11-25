@@ -1,6 +1,6 @@
 using EpicChain.BlockchainToolkit.Models;
 
-namespace NeoWorkNet;
+namespace EpicChainWorknet;
 
 class TextWalletWriter : IWalletWriter
 {

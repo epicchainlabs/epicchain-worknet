@@ -1,7 +1,7 @@
 using System.IO.Abstractions;
 using McMaster.Extensions.CommandLineUtils;
 
-namespace NeoShell
+namespace EpicChainShell
 {
     class TransactionExecutorFactory
     {

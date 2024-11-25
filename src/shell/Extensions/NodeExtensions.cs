@@ -13,12 +13,12 @@ using EpicChain.SmartContract.Manifest;
 using EpicChain.SmartContract.Native;
 using EpicChain.VM;
 using EpicChain.Wallets;
-using NeoShell.Models;
+using EpicChainShell.Models;
 using OneOf;
 using All = OneOf.Types.All;
 using None = OneOf.Types.None;
 
-namespace NeoShell
+namespace EpicChainShell
 {
   static class NodeExtensions
   {

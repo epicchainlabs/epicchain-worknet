@@ -1,12 +1,12 @@
 ﻿using System.IO.Abstractions;
 using McMaster.Extensions.CommandLineUtils;
 using Microsoft.Extensions.DependencyInjection;
-using NeoWorkNet.Commands;
+using EpicChainWorknet.Commands;
 using static Crayon.Output;
 
-namespace NeoWorkNet;
+namespace EpicChainWorknet;
 
-[Command("neo-worknet", Description = "Branch a public Neo N3 blockchain for private development use", UsePagerForHelpText = false)]
+[Command("neo-worknet", Description = "Branch a public EpicChain  blockchain for private development use", UsePagerForHelpText = false)]
 [VersionOption(ThisAssembly.AssemblyInformationalVersion)]
 [Subcommand(typeof(CreateCommand))]
 [Subcommand(typeof(PrefetchCommand))]

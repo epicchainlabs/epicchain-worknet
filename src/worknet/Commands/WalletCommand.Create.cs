@@ -4,7 +4,7 @@ using McMaster.Extensions.CommandLineUtils;
 using EpicChain.BlockchainToolkit.Models;
 using static Crayon.Output;
 
-namespace NeoWorkNet.Commands
+namespace EpicChainWorknet.Commands
 {
     partial class WalletCommand
     {

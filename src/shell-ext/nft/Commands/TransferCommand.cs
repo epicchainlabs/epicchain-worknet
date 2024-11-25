@@ -11,7 +11,7 @@ namespace NeoNft.Commands
     [Command("transfer", Description = "Transfer a NFT to another address")]
     partial class TransferCommand
     {
-        [Option(Description = "Path to neo data file")]
+        [Option(Description = "Path to EpicChain data file")]
         internal string Input { get; init; } = string.Empty;
 
         [Argument(0, Description = "Contract hash of the NFT contract")]

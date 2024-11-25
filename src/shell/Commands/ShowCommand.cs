@@ -1,6 +1,6 @@
 using McMaster.Extensions.CommandLineUtils;
 
-namespace NeoShell.Commands
+namespace EpicChainShell.Commands
 {
   [Command("show", Description = "Show information")]
   [Subcommand(typeof(Balance), typeof(Block), typeof(Transaction))]

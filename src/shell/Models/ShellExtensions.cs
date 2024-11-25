@@ -2,7 +2,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.IO.Abstractions;
 using Newtonsoft.Json;
 
-namespace NeoShell.Models
+namespace EpicChainShell.Models
 {
     class ShellExtensions : List<ShellExtension>
     {

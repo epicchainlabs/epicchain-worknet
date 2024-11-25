@@ -3,13 +3,13 @@ using System.IO.Abstractions;
 using System.Runtime.InteropServices;
 using McMaster.Extensions.CommandLineUtils;
 using Microsoft.Extensions.DependencyInjection;
-using NeoShell.Commands;
-using NeoShell.Models;
+using EpicChainShell.Commands;
+using EpicChainShell.Models;
 using Newtonsoft.Json;
 
-namespace NeoShell
+namespace EpicChainShell
 {
-    [Command("neosh", Description = "Neo N3 blockchain shell", UsePagerForHelpText = false)]
+    [Command("neosh", Description = "Neo  blockchain shell", UsePagerForHelpText = false)]
     [Subcommand(typeof(ContractCommand))]
     [Subcommand(typeof(ConnectCommand))]
     [Subcommand(typeof(ExtensionCommand))]

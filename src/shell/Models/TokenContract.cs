@@ -3,7 +3,7 @@ using EpicChain.Json;
 using EpicChain.Persistence;
 using EpicChain.SmartContract.Native;
 
-namespace NeoShell.Models
+namespace EpicChainShell.Models
 {
     public enum TokenStandard
     {

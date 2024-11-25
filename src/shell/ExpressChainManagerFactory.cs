@@ -4,7 +4,7 @@ using EpicChain.BlockchainToolkit;
 using EpicChain.SmartContract;
 using EpicChain.Wallets;
 
-namespace NeoShell
+namespace EpicChainShell
 {
   internal class ExpressChainManagerFactory
   {

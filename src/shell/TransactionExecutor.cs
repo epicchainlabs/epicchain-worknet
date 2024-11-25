@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 using OneOf;
 using OneOf.Types;
 
-namespace NeoShell
+namespace EpicChainShell
 {
   using All = OneOf.Types.All;
 

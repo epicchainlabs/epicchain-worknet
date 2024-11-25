@@ -5,7 +5,7 @@ using EpicChain.BlockchainToolkit.Models;
 using Newtonsoft.Json;
 using static Crayon.Output;
 
-namespace NeoWorkNet.Commands
+namespace EpicChainWorknet.Commands
 {
     partial class WalletCommand
     {

@@ -3,8 +3,8 @@
 
   <PropertyGroup>
     <Authors>ngd enterprise</Authors>
-    <Company>The Neo Project</Company>
-    <Copyright>2015-2023 The Neo Project</Copyright>
+    <Company>The EpicChain Project</Company>
+    <Copyright>2015-2023 The EpicChain Project</Copyright>
     <ImplicitUsings>enable</ImplicitUsings>
     <LangVersion>10</LangVersion>
     <Nullable>enable</Nullable>

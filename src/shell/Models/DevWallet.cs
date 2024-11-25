@@ -5,7 +5,7 @@ using EpicChain.SmartContract;
 using EpicChain.Wallets;
 using EpicChain.Wallets.NEP6;
 
-namespace NeoShell.Models
+namespace EpicChainShell.Models
 {
     class DevWallet : Wallet
     {

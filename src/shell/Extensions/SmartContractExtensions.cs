@@ -5,13 +5,13 @@ using EpicChain.Persistence;
 using EpicChain.SmartContract.Iterators;
 using EpicChain.SmartContract.Native;
 using EpicChain.VM;
-using NeoShell.Models;
+using EpicChainShell.Models;
 using ByteString = EpicChain.VM.Types.ByteString;
 using Integer = EpicChain.VM.Types.Integer;
 using InteropInterface = EpicChain.VM.Types.InteropInterface;
 using StackItemType = EpicChain.VM.Types.StackItemType;
 
-namespace NeoShell
+namespace EpicChainShell
 {
     static class SmartContractExtensions
     {

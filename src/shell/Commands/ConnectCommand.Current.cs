@@ -1,8 +1,8 @@
 using System.IO.Abstractions;
 using McMaster.Extensions.CommandLineUtils;
-using NeoShell.Models;
+using EpicChainShell.Models;
 
-namespace NeoShell.Commands
+namespace EpicChainShell.Commands
 {
   partial class ConnectCommand
   {

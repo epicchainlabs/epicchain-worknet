@@ -3,9 +3,9 @@ using System.IO.Abstractions;
 using McMaster.Extensions.CommandLineUtils;
 using EpicChain.BlockchainToolkit.Models;
 using EpicChain.Wallets;
-using NeoWorkNet.Node;
+using EpicChainWorknet.Node;
 
-namespace NeoWorkNet.Commands
+namespace EpicChainWorknet.Commands
 {
     partial class StorageCommand
     {

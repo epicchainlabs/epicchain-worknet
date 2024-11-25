@@ -1,6 +1,6 @@
 using McMaster.Extensions.CommandLineUtils;
 
-namespace NeoWorkNet.Commands
+namespace EpicChainWorknet.Commands
 {
     [Command("wallet", Description = "Manage epicchain-worknet wallets")]
     [Subcommand(typeof(Create))]

@@ -1,8 +1,8 @@
 <!-- markdownlint-enable -->
 # EpicChain-Worknet Command Reference
 
-The `neo-worknet` tool enables a developer to create and run a Neo N3 consensus node that branches
-from a public Neo N3 blockchain - including the official Neo N3 MainNet and T5 TestNet. This provides
+The `neo-worknet` tool enables a developer to create and run a EpicChain  consensus node that branches
+from a public EpicChain  blockchain - including the official EpicChain  MainNet and T5 TestNet. This provides
 the developer a local scratchpad environment that mirrors the state of a known public network at a 
 specified index. Changes to the local branch of the network are independent of the public network.
 
@@ -12,7 +12,7 @@ specified index. Changes to the local branch of the network are independent of t
 ## epicchain-worknet create
 
 ```
-Create a Neo Worknet branch
+Create a EpicChain Worknet branch
 
 Usage: epicchain-worknet create [options] <RpcUri> <Output>
 
@@ -29,13 +29,13 @@ Options:
   -?|-h|--help        Show help information.
 ```
 
-The `create` command creates a new local WorkNet blockchain as a branch from a public Neo N3 blockchain. 
+The `create` command creates a new local WorkNet blockchain as a branch from a public EpicChain  blockchain. 
 This command will create both a `.neo-worknet` file to hold details about the blockchain branch and a 
 `data` folder that will contain data loaded from the remote blockchain and cached locally as well as 
 locally generated blocks and contract storage updates.
 
-The user must specify a remote Neo N3 blockchain network to branch from. EpicChain-Worknet has built in knowledge
-of MainNet and the T5 TestNet. However, the user can specify any Neo N3 RPC API node they wish. The 
+The user must specify a remote EpicChain  blockchain network to branch from. EpicChain-Worknet has built in knowledge
+of MainNet and the T5 TestNet. However, the user can specify any EpicChain  RPC API node they wish. The 
 user can specify a specific block index to branch at. If unspecified, `neo-worknet` will branch at the
 current height of the specified blockchain. 
 
@@ -43,7 +43,7 @@ current height of the specified blockchain.
 > to be installed on the `RpcUri` argument. Furthermore, the StateService *MUST* be configured with 
 > `FullState` as `true`.
 
-The branched blockchain *CANNOT* be validated across the branch point. When a Neo Worknet branch network
+The branched blockchain *CANNOT* be validated across the branch point. When a EpicChain Worknet branch network
 is created, a new wallet account is created to act as the consensus block signer. The public network's
 council members' accounts are obviously not available for signing new blocks on a local branch of the
 chain. Changing the consensus account that signs blocks requires an update to the `NextConsensus` field.

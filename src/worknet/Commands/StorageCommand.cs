@@ -2,7 +2,7 @@ using McMaster.Extensions.CommandLineUtils;
 using EpicChain;
 using EpicChain.BlockchainToolkit.Models;
 
-namespace NeoWorkNet.Commands
+namespace EpicChainWorknet.Commands
 {
     [Command("storage", Description = "Manage epicchain-worknet contract storage values")]
     [Subcommand(typeof(List), typeof(Get), typeof(Update))]

@@ -3,7 +3,7 @@ using System.IO.Abstractions;
 using McMaster.Extensions.CommandLineUtils;
 using EpicChain.BlockchainToolkit.Models;
 
-namespace NeoWorkNet.Commands
+namespace EpicChainWorknet.Commands
 {
     partial class WalletCommand
     {

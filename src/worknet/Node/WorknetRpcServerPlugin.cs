@@ -5,7 +5,7 @@ using EpicChain.Network.RPC;
 using EpicChain.Plugins;
 using EpicChain.SmartContract.Native;
 
-namespace NeoWorkNet.Node;
+namespace EpicChainWorknet.Node;
 
 class WorknetRpcServerPlugin : Plugin
 {

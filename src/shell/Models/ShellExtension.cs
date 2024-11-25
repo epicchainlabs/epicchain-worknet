@@ -5,7 +5,7 @@ using EpicChain.Network.P2P.Payloads;
 using EpicChain.VM;
 using Newtonsoft.Json;
 
-namespace NeoShell.Models
+namespace EpicChainShell.Models
 {
     class ShellExtension
     {

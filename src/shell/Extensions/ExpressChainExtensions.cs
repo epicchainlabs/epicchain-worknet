@@ -5,9 +5,9 @@ using EpicChain;
 using EpicChain.BlockchainToolkit;
 using EpicChain.BlockchainToolkit.Models;
 using EpicChain.Wallets;
-using NeoShell.Models;
+using EpicChainShell.Models;
 
-namespace NeoShell
+namespace EpicChainShell
 {
     static class ExpressChainExtensions
     {
@@ -52,7 +52,7 @@ namespace NeoShell
             // if the user specified a password, use it
             if (!string.IsNullOrEmpty(password)) return password;
 
-            // if the name is a valid Neo Express account name, no password is needed
+            // if the name is a valid EpicChain Express account name, no password is needed
             if (chain.IsReservedName(name)) return password;
             if (chain.Wallets.Any(w => name.Equals(w.Name, StringComparison.OrdinalIgnoreCase))) return password;
 

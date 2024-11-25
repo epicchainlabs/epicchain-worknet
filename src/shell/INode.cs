@@ -4,9 +4,9 @@ using EpicChain.Network.RPC.Models;
 using EpicChain.SmartContract.Manifest;
 using EpicChain.VM;
 using EpicChain.Wallets;
-using NeoShell.Models;
+using EpicChainShell.Models;
 
-namespace NeoShell
+namespace EpicChainShell
 {
   interface INode : IDisposable
   {

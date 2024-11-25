@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using McMaster.Extensions.CommandLineUtils;
 using EpicChain.Network.P2P.Payloads;
 
-namespace NeoShell.Commands
+namespace EpicChainShell.Commands
 {
     partial class ContractCommand
     {

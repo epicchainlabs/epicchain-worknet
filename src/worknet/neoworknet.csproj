@@ -5,7 +5,7 @@
     <OutputType>Exe</OutputType>
     <PackageId>EpicChain.WorkNet</PackageId>
     <PackAsTool>true</PackAsTool>
-    <RootNamespace>NeoWorkNet</RootNamespace>
+    <RootNamespace>EpicChainWorknet</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

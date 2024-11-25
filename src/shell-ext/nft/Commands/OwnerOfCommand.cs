@@ -19,7 +19,7 @@ namespace NeoNft.Commands
         [Required]
         internal string Id { get; init; } = string.Empty;
 
-        [Option(Description = "Path to neo data file")]
+        [Option(Description = "Path to EpicChain data file")]
         internal string Input { get; init; } = string.Empty;
 
         [Option(Description = "Enable contract execution tracing")]

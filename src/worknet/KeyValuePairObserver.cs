@@ -1,4 +1,4 @@
-namespace NeoWorkNet;
+namespace EpicChainWorknet;
 
 public class KeyValuePairObserver : IObserver<KeyValuePair<string, object?>>
 {

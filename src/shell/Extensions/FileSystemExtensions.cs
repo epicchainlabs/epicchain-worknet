@@ -3,9 +3,9 @@ using EpicChain.BlockchainToolkit.Models;
 using EpicChain.IO;
 using EpicChain.SmartContract;
 using EpicChain.SmartContract.Manifest;
-using NeoShell.Models;
+using EpicChainShell.Models;
 
-namespace NeoShell
+namespace EpicChainShell
 {
   static class FileSystemExtensions
   {
@@ -57,7 +57,7 @@ namespace NeoShell
 
       var rootPath = fileSystem.Path.Combine(
           Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData, Environment.SpecialFolderOption.DoNotVerify),
-          "Neo-Express",
+          "EpicChains-Express",
           "blockchain-nodes");
       return fileSystem.Path.Combine(rootPath, account.ScriptHash);
     }

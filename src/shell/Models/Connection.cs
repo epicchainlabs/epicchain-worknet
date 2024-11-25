@@ -1,5 +1,5 @@
 
-namespace NeoShell.Models
+namespace EpicChainShell.Models
 {
   class Connection
   {

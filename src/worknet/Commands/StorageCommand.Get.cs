@@ -3,10 +3,10 @@ using System.IO.Abstractions;
 using McMaster.Extensions.CommandLineUtils;
 using EpicChain;
 using EpicChain.BlockchainToolkit.Models;
-using NeoWorkNet.Node;
+using EpicChainWorknet.Node;
 using Newtonsoft.Json;
 
-namespace NeoWorkNet.Commands
+namespace EpicChainWorknet.Commands
 {
     internal partial class StorageCommand
     {

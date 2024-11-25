@@ -3,7 +3,7 @@ using EpicChain.Wallets;
 using EpicChain;
 using EpicChain.BlockchainToolkit.Models;
 
-namespace NeoShell.Models
+namespace EpicChainShell.Models
 {
     class DevWalletAccount : WalletAccount
     {

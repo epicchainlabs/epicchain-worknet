@@ -5,7 +5,7 @@
     <OutputType>Exe</OutputType>
     <PackageId>EpicChain.Shell</PackageId>
     <PackAsTool>true</PackAsTool>
-    <RootNamespace>NeoShell</RootNamespace>
+    <RootNamespace>EpicChainShell</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

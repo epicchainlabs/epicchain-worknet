@@ -6,7 +6,7 @@ using System.IO.Abstractions;
 using static EpicChain.BlockchainToolkit.Constants;
 using static Crayon.Output;
 
-namespace NeoWorkNet;
+namespace EpicChainWorknet;
 
 static class Utility
 {
