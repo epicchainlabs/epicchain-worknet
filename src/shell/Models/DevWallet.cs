@@ -1,9 +1,9 @@
 ﻿using System.Collections.Immutable;
-using Neo;
-using Neo.BlockchainToolkit.Models;
-using Neo.SmartContract;
-using Neo.Wallets;
-using Neo.Wallets.NEP6;
+using EpicChain;
+using EpicChain.BlockchainToolkit.Models;
+using EpicChain.SmartContract;
+using EpicChain.Wallets;
+using EpicChain.Wallets.NEP6;
 
 namespace NeoShell.Models
 {

@@ -1,9 +1,9 @@
-using Neo;
-using Neo.Network.P2P.Payloads;
-using Neo.Network.RPC.Models;
-using Neo.SmartContract.Manifest;
-using Neo.VM;
-using Neo.Wallets;
+using EpicChain;
+using EpicChain.Network.P2P.Payloads;
+using EpicChain.Network.RPC.Models;
+using EpicChain.SmartContract.Manifest;
+using EpicChain.VM;
+using EpicChain.Wallets;
 using NeoShell.Models;
 
 namespace NeoShell

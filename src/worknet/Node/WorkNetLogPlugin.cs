@@ -1,13 +1,13 @@
 using System.Diagnostics;
 using McMaster.Extensions.CommandLineUtils;
-using Neo;
-using Neo.BlockchainToolkit.Persistence;
-using Neo.Ledger;
-using Neo.Network.P2P.Payloads;
-using Neo.Persistence;
-using Neo.Plugins;
-using Neo.SmartContract;
-using Neo.SmartContract.Native;
+using EpicChain;
+using EpicChain.BlockchainToolkit.Persistence;
+using EpicChain.Ledger;
+using EpicChain.Network.P2P.Payloads;
+using EpicChain.Persistence;
+using EpicChain.Plugins;
+using EpicChain.SmartContract;
+using EpicChain.SmartContract.Native;
 using static Crayon.Output;
 
 namespace NeoWorkNet.Node;
@@ -29,12 +29,12 @@ class WorkNetLogPlugin : Plugin
         this.console = console;
         Blockchain.Committing += OnCommitting;
         ApplicationEngine.Log += OnAppEngineLog!;
-        Neo.Utility.Logging += OnNeoUtilityLog;
+        EpicChain.Utility.Logging += OnNeoUtilityLog;
     }
 
     public override void Dispose()
     {
-        Neo.Utility.Logging -= OnNeoUtilityLog;
+        EpicChain.Utility.Logging -= OnNeoUtilityLog;
         ApplicationEngine.Log -= OnAppEngineLog!;
         Blockchain.Committing -= OnCommitting;
         GC.SuppressFinalize(this);
@@ -86,7 +86,7 @@ class WorkNetLogPlugin : Plugin
 
     void OnApplicationExecuted(Blockchain.ApplicationExecuted applicationExecuted)
     {
-        if (applicationExecuted.VMState == Neo.VM.VMState.FAULT)
+        if (applicationExecuted.VMState == EpicChain.VM.VMState.FAULT)
         {
             var logMessage = $"Tx FAULT: hash={applicationExecuted.Transaction.Hash}";
             if (!string.IsNullOrEmpty(applicationExecuted.Exception.Message))

@@ -1,7 +1,7 @@
 using System.IO.Abstractions;
 using McMaster.Extensions.CommandLineUtils;
-using Neo.BlockchainToolkit;
-using Neo.BlockchainToolkit.Models;
+using EpicChain.BlockchainToolkit;
+using EpicChain.BlockchainToolkit.Models;
 using Newtonsoft.Json;
 using static Crayon.Output;
 

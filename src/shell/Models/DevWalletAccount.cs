@@ -1,7 +1,7 @@
-﻿using Neo.SmartContract;
-using Neo.Wallets;
-using Neo;
-using Neo.BlockchainToolkit.Models;
+﻿using EpicChain.SmartContract;
+using EpicChain.Wallets;
+using EpicChain;
+using EpicChain.BlockchainToolkit.Models;
 
 namespace NeoShell.Models
 {

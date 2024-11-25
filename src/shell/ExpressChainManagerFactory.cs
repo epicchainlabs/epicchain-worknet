@@ -1,8 +1,8 @@
 using System.IO.Abstractions;
-using Neo;
-using Neo.BlockchainToolkit;
-using Neo.SmartContract;
-using Neo.Wallets;
+using EpicChain;
+using EpicChain.BlockchainToolkit;
+using EpicChain.SmartContract;
+using EpicChain.Wallets;
 
 namespace NeoShell
 {

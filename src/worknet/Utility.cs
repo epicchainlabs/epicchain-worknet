@@ -1,9 +1,9 @@
 using McMaster.Extensions.CommandLineUtils;
-using Neo.BlockchainToolkit;
-using Neo.BlockchainToolkit.Models;
+using EpicChain.BlockchainToolkit;
+using EpicChain.BlockchainToolkit.Models;
 using Newtonsoft.Json;
 using System.IO.Abstractions;
-using static Neo.BlockchainToolkit.Constants;
+using static EpicChain.BlockchainToolkit.Constants;
 using static Crayon.Output;
 
 namespace NeoWorkNet;

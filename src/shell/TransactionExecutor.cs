@@ -1,10 +1,10 @@
 using System.IO.Abstractions;
 using System.Numerics;
-using Neo;
-using Neo.BlockchainToolkit;
-using Neo.Network.P2P.Payloads;
-using Neo.SmartContract;
-using Neo.VM;
+using EpicChain;
+using EpicChain.BlockchainToolkit;
+using EpicChain.Network.P2P.Payloads;
+using EpicChain.SmartContract;
+using EpicChain.VM;
 using Newtonsoft.Json;
 using OneOf;
 using OneOf.Types;
@@ -114,7 +114,7 @@ namespace NeoShell
             Account = accountHash,
             Scopes = witnessScope,
             AllowedContracts = Array.Empty<UInt160>(),
-            AllowedGroups = Array.Empty<Neo.Cryptography.ECC.ECPoint>()
+            AllowedGroups = Array.Empty<EpicChain.Cryptography.ECC.ECPoint>()
           }
           : null;
 
@@ -167,7 +167,7 @@ namespace NeoShell
           .DeployAsync(nefFile, manifest, wallet, accountHash, witnessScope, dataParam)
           .ConfigureAwait(false);
 
-      var contractHash = Neo.SmartContract.Helper.GetContractHash(accountHash, nefFile.CheckSum, manifest.Name);
+      var contractHash = EpicChain.SmartContract.Helper.GetContractHash(accountHash, nefFile.CheckSum, manifest.Name);
       if (json)
       {
         using var jsonWriter = new JsonTextWriter(writer) { Formatting = Formatting.Indented };
@@ -258,33 +258,33 @@ namespace NeoShell
       }
     }
 
-    static async Task WriteStackItemAsync(System.IO.TextWriter writer, Neo.VM.Types.StackItem item, int indent = 1, string prefix = "")
+    static async Task WriteStackItemAsync(System.IO.TextWriter writer, EpicChain.VM.Types.StackItem item, int indent = 1, string prefix = "")
     {
       switch (item)
       {
-        case Neo.VM.Types.Boolean _:
+        case EpicChain.VM.Types.Boolean _:
           await WriteLineAsync(item.GetBoolean() ? "true" : "false").ConfigureAwait(false);
           break;
-        case Neo.VM.Types.Integer @int:
+        case EpicChain.VM.Types.Integer @int:
           await WriteLineAsync(@int.GetInteger().ToString()).ConfigureAwait(false);
           break;
-        case Neo.VM.Types.Buffer buffer:
-          await WriteLineAsync(Neo.Helper.ToHexString(buffer.GetSpan())).ConfigureAwait(false);
+        case EpicChain.VM.Types.Buffer buffer:
+          await WriteLineAsync(EpicChain.Helper.ToHexString(buffer.GetSpan())).ConfigureAwait(false);
           break;
-        case Neo.VM.Types.ByteString byteString:
-          await WriteLineAsync(Neo.Helper.ToHexString(byteString.GetSpan())).ConfigureAwait(false);
+        case EpicChain.VM.Types.ByteString byteString:
+          await WriteLineAsync(EpicChain.Helper.ToHexString(byteString.GetSpan())).ConfigureAwait(false);
           break;
-        case Neo.VM.Types.Null _:
+        case EpicChain.VM.Types.Null _:
           await WriteLineAsync("<null>").ConfigureAwait(false);
           break;
-        case Neo.VM.Types.Array array:
+        case EpicChain.VM.Types.Array array:
           await WriteLineAsync($"Array: ({array.Count})").ConfigureAwait(false);
           for (int i = 0; i < array.Count; i++)
           {
             await WriteStackItemAsync(writer, array[i], indent + 1).ConfigureAwait(false);
           }
           break;
-        case Neo.VM.Types.Map map:
+        case EpicChain.VM.Types.Map map:
           await WriteLineAsync($"Map: ({map.Count})").ConfigureAwait(false);
           foreach (var m in map)
           {

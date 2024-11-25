@@ -1,4 +1,4 @@
-using Neo.BlockchainToolkit.Models;
+using EpicChain.BlockchainToolkit.Models;
 
 namespace NeoWorkNet;
 

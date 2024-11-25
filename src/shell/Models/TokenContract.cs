@@ -1,7 +1,7 @@
-using Neo;
-using Neo.Json;
-using Neo.Persistence;
-using Neo.SmartContract.Native;
+using EpicChain;
+using EpicChain.Json;
+using EpicChain.Persistence;
+using EpicChain.SmartContract.Native;
 
 namespace NeoShell.Models
 {

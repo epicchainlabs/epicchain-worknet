@@ -2,11 +2,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.IO.Abstractions;
 using McMaster.Extensions.CommandLineUtils;
-using Neo.BlockchainToolkit.Persistence;
+using EpicChain.BlockchainToolkit.Persistence;
 using Newtonsoft.Json;
 using NeoWorkNet.Node;
-using static Neo.BlockchainToolkit.Constants;
-using static Neo.BlockchainToolkit.Utility;
+using static EpicChain.BlockchainToolkit.Constants;
+using static EpicChain.BlockchainToolkit.Utility;
 using static Crayon.Output;
 
 namespace NeoWorkNet.Commands;

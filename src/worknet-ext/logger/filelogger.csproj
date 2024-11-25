@@ -23,10 +23,10 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <PackageReference Include="Neo.BlockchainToolkit.Library"
+        <PackageReference Include="EpicChain.BlockchainToolkit.Library"
           Version="$(BlockchainToolkitLibraryVersion)" />
-        <PackageReference Include="Neo.Consensus.DBFT" Version="$(NeoVersion)" />
-        <PackageReference Include="Neo.Plugins.RpcServer" Version="$(NeoVersion)" />
+        <PackageReference Include="EpicChain.Consensus.DBFT" Version="$(NeoVersion)" />
+        <PackageReference Include="EpicChain.Plugins.RpcServer" Version="$(NeoVersion)" />
       </ItemGroup>
     </Otherwise>
   </Choose>

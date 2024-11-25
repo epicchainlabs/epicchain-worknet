@@ -1,9 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 using System.IO.Abstractions;
 using McMaster.Extensions.CommandLineUtils;
-using Neo;
-using Neo.BlockchainToolkit.Models;
-using Neo.VM;
+using EpicChain;
+using EpicChain.BlockchainToolkit.Models;
+using EpicChain.VM;
 using Newtonsoft.Json;
 
 namespace NeoNft.Commands

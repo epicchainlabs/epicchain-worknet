@@ -1,5 +1,5 @@
 using System.Reflection;
-using Neo.Plugins;
+using EpicChain.Plugins;
 
 static class PluginHandler
 {

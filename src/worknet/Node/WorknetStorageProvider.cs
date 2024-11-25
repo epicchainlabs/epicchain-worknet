@@ -1,4 +1,4 @@
-using Neo.Persistence;
+using EpicChain.Persistence;
 
 namespace NeoWorkNet.Node;
 

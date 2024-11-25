@@ -1,15 +1,15 @@
 using System.Numerics;
-using Neo;
-using Neo.IO;
-using Neo.Persistence;
-using Neo.SmartContract.Iterators;
-using Neo.SmartContract.Native;
-using Neo.VM;
+using EpicChain;
+using EpicChain.IO;
+using EpicChain.Persistence;
+using EpicChain.SmartContract.Iterators;
+using EpicChain.SmartContract.Native;
+using EpicChain.VM;
 using NeoShell.Models;
-using ByteString = Neo.VM.Types.ByteString;
-using Integer = Neo.VM.Types.Integer;
-using InteropInterface = Neo.VM.Types.InteropInterface;
-using StackItemType = Neo.VM.Types.StackItemType;
+using ByteString = EpicChain.VM.Types.ByteString;
+using Integer = EpicChain.VM.Types.Integer;
+using InteropInterface = EpicChain.VM.Types.InteropInterface;
+using StackItemType = EpicChain.VM.Types.StackItemType;
 
 namespace NeoShell
 {
@@ -27,7 +27,7 @@ namespace NeoShell
                 using var engine = builder.Invoke(settings, snapshot);
                 if (engine.State != VMState.FAULT && engine.ResultStack.Count >= 2)
                 {
-                    var decimals = (byte)engine.ResultStack.Pop<Neo.VM.Types.Integer>().GetInteger();
+                    var decimals = (byte)engine.ResultStack.Pop<EpicChain.VM.Types.Integer>().GetInteger();
                     var symbol = System.Text.Encoding.UTF8.GetString(engine.ResultStack.Pop().GetSpan());
                     details = (contractState.Manifest.Name, symbol, decimals);
                     return true;

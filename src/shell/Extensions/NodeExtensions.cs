@@ -1,18 +1,18 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics;
 using System.Text;
-using Neo;
-using Neo.BlockchainToolkit;
-using Neo.BlockchainToolkit.Models;
-using Neo.IO;
-using Neo.Network.P2P.Payloads;
-using Neo.Network.RPC.Models;
-using Neo.Network.RPC;
-using Neo.SmartContract;
-using Neo.SmartContract.Manifest;
-using Neo.SmartContract.Native;
-using Neo.VM;
-using Neo.Wallets;
+using EpicChain;
+using EpicChain.BlockchainToolkit;
+using EpicChain.BlockchainToolkit.Models;
+using EpicChain.IO;
+using EpicChain.Network.P2P.Payloads;
+using EpicChain.Network.RPC.Models;
+using EpicChain.Network.RPC;
+using EpicChain.SmartContract;
+using EpicChain.SmartContract.Manifest;
+using EpicChain.SmartContract.Native;
+using EpicChain.VM;
+using EpicChain.Wallets;
 using NeoShell.Models;
 using OneOf;
 using All = OneOf.Types.All;
@@ -72,7 +72,7 @@ namespace NeoShell
       data ??= new ContractParameter(ContractParameterType.Any);
 
       // check for bad opcodes (logic borrowed from neo-cli LoadDeploymentScript)
-      Neo.VM.Script script = nefFile.Script;
+      EpicChain.VM.Script script = nefFile.Script;
       for (var i = 0; i < script.Length;)
       {
         var instruction = script.GetInstruction(i);
@@ -82,7 +82,7 @@ namespace NeoShell
         }
         else
         {
-          if (!Enum.IsDefined(typeof(Neo.VM.OpCode), instruction.OpCode))
+          if (!Enum.IsDefined(typeof(EpicChain.VM.OpCode), instruction.OpCode))
           {
             throw new FormatException($"Invalid opcode found at {i}-{((byte)instruction.OpCode).ToString("x2")}");
           }
@@ -108,7 +108,7 @@ namespace NeoShell
                                                           WitnessScope witnessScope)
     {
       // check for bad opcodes (logic borrowed from neo-cli LoadDeploymentScript)
-      Neo.VM.Script script = nefFile.Script;
+      EpicChain.VM.Script script = nefFile.Script;
       for (var i = 0; i < script.Length;)
       {
         var instruction = script.GetInstruction(i);
@@ -118,7 +118,7 @@ namespace NeoShell
         }
         else
         {
-          if (!Enum.IsDefined(typeof(Neo.VM.OpCode), instruction.OpCode))
+          if (!Enum.IsDefined(typeof(EpicChain.VM.OpCode), instruction.OpCode))
           {
             throw new FormatException($"Invalid opcode found at {i}-{((byte)instruction.OpCode).ToString("x2")}");
           }
@@ -157,7 +157,7 @@ namespace NeoShell
     {
       if ("neo".Equals(asset, StringComparison.OrdinalIgnoreCase))
       {
-        return NativeContract.NEO.Hash;
+        return NativeContract.EpicChain.Hash;
       }
 
       if ("gas".Equals(asset, StringComparison.OrdinalIgnoreCase))
@@ -190,7 +190,7 @@ namespace NeoShell
       if (quantity.IsT0)
       {
         var results = await expressNode.InvokeAsync(asset.MakeScript("decimals")).ConfigureAwait(false);
-        if (results.Stack.Length > 0 && results.Stack[0].Type == Neo.VM.Types.StackItemType.Integer)
+        if (results.Stack.Length > 0 && results.Stack[0].Type == EpicChain.VM.Types.StackItemType.Integer)
         {
           var decimals = (byte)(results.Stack[0].GetInteger());
           var value = quantity.AsT0.ToBigInteger(decimals);
@@ -273,9 +273,9 @@ namespace NeoShell
     internal static async Task<PolicyValues> GetPolicyAsync(Func<Script, Task<RpcInvokeResult>> invokeAsync)
     {
       using var builder = new ScriptBuilder();
-      builder.EmitDynamicCall(NativeContract.NEO.Hash, "getGasPerBlock");
+      builder.EmitDynamicCall(NativeContract.EpicChain.Hash, "getGasPerBlock");
       builder.EmitDynamicCall(NativeContract.ContractManagement.Hash, "getMinimumDeploymentFee");
-      builder.EmitDynamicCall(NativeContract.NEO.Hash, "getRegisterPrice");
+      builder.EmitDynamicCall(NativeContract.EpicChain.Hash, "getRegisterPrice");
       builder.EmitDynamicCall(NativeContract.Oracle.Hash, "getPrice");
       builder.EmitDynamicCall(NativeContract.Policy.Hash, "getFeePerByte");
       builder.EmitDynamicCall(NativeContract.Policy.Hash, "getStoragePrice");

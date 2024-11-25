@@ -2,23 +2,23 @@ using System.Buffers.Binary;
 using System.Net;
 using McMaster.Extensions.CommandLineUtils;
 using Microsoft.Extensions.Configuration;
-using Neo;
-using Neo.BlockchainToolkit.Models;
-using Neo.BlockchainToolkit.Persistence;
-using Neo.BlockchainToolkit.Plugins;
-using Neo.Cryptography;
-using Neo.IO;
-using Neo.Json;
-using Neo.Network.P2P.Payloads;
-using Neo.Network.RPC;
-using Neo.Persistence;
-using Neo.Plugins;
-using Neo.SmartContract;
-using Neo.SmartContract.Manifest;
-using Neo.SmartContract.Native;
-using Neo.Wallets;
-using NeoArray = Neo.VM.Types.Array;
-using NeoStruct = Neo.VM.Types.Struct;
+using EpicChain;
+using EpicChain.BlockchainToolkit.Models;
+using EpicChain.BlockchainToolkit.Persistence;
+using EpicChain.BlockchainToolkit.Plugins;
+using EpicChain.Cryptography;
+using EpicChain.IO;
+using EpicChain.Json;
+using EpicChain.Network.P2P.Payloads;
+using EpicChain.Network.RPC;
+using EpicChain.Persistence;
+using EpicChain.Plugins;
+using EpicChain.SmartContract;
+using EpicChain.SmartContract.Manifest;
+using EpicChain.SmartContract.Native;
+using EpicChain.Wallets;
+using NeoArray = EpicChain.VM.Types.Array;
+using NeoStruct = EpicChain.VM.Types.Struct;
 
 namespace NeoWorkNet.Node;
 
@@ -93,13 +93,13 @@ class WorkNetNode
         // Prefix_Committee stores array of structs containing PublicKey / vote count 
         var members = consensusAccounts.Select(a => new NeoStruct { a.GetKey().PublicKey.ToArray(), 0 });
         var committee = new NeoArray(members);
-        var committeeKeyBuilder = new KeyBuilder(NativeContract.NEO.Id, Prefix_Committee);
+        var committeeKeyBuilder = new KeyBuilder(NativeContract.EpicChain.Id, Prefix_Committee);
         var committeeItem = snapshot.GetAndChange(committeeKeyBuilder);
         committeeItem.Value = BinarySerializer.Serialize(committee, 1024 * 1024);
 
         // remove existing candidates (Prefix_Candidate) to ensure that 
         // worknet node account doesn't get outvoted
-        var candidateKeyBuilder = new KeyBuilder(NativeContract.NEO.Id, Prefix_Candidate);
+        var candidateKeyBuilder = new KeyBuilder(NativeContract.EpicChain.Id, Prefix_Candidate);
         foreach (var (key, value) in snapshot.Find(candidateKeyBuilder.ToArray()))
         {
             snapshot.Delete(key);
@@ -117,7 +117,7 @@ class WorkNetNode
                 Version = 0,
                 PrevHash = prevBlock.Hash,
                 MerkleRoot = MerkleTree.ComputeRoot(Array.Empty<UInt256>()),
-                Timestamp = Math.Max(Neo.Helper.ToTimestampMS(DateTime.UtcNow), prevBlock.Timestamp + 1),
+                Timestamp = Math.Max(EpicChain.Helper.ToTimestampMS(DateTime.UtcNow), prevBlock.Timestamp + 1),
                 Index = prevBlock.Index + 1,
                 PrimaryIndex = 0,
                 NextConsensus = consensusContract.ScriptHash,
@@ -140,7 +140,7 @@ class WorkNetNode
 
         // update Prefix_CurrentBlock (struct containing current block hash + index)
         var curBlockKey = new KeyBuilder(NativeContract.Ledger.Id, Prefix_CurrentBlock);
-        var currentBlock = new Neo.VM.Types.Struct() { trimmedBlock.Hash.ToArray(), trimmedBlock.Index };
+        var currentBlock = new EpicChain.VM.Types.Struct() { trimmedBlock.Hash.ToArray(), trimmedBlock.Index };
         var currentBlockItem = snapshot.GetAndChange(curBlockKey);
         currentBlockItem.Value = BinarySerializer.Serialize(currentBlock, 1024 * 1024);
 
@@ -213,12 +213,12 @@ class WorkNetNode
 
                 using var persistencePlugin = new ToolkitPersistencePlugin(db);
                 using var logPlugin = new WorkNetLogPlugin(console, Utility.GetDiagnosticWriter(console));
-                using var dbftPlugin = new Neo.Consensus.DBFTPlugin(GetConsensusSettings(chain));
+                using var dbftPlugin = new EpicChain.Consensus.DBFTPlugin(GetConsensusSettings(chain));
                 using var rpcServerPlugin = new WorknetRpcServerPlugin(GetRpcServerSettings(chain), persistencePlugin, chain.Uri);
-                using var neoSystem = new Neo.NeoSystem(protocolSettings, storeProvider.Name);
+                using var neoSystem = new EpicChain.NeoSystem(protocolSettings, storeProvider.Name);
                 PluginHandler.LoadPlugins(Path.Combine(AppContext.BaseDirectory, "plugins"), console.Out);
                 PluginHandler.LoadPlugins(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".neo", "plugins"), console.Out);
-                neoSystem.StartNode(new Neo.Network.P2P.ChannelsConfig
+                neoSystem.StartNode(new EpicChain.Network.P2P.ChannelsConfig
                 {
                     Tcp = new IPEndPoint(IPAddress.Loopback, chain.ConsensusNode.TcpPort),
                     WebSocket = new IPEndPoint(IPAddress.Loopback, chain.ConsensusNode.WebSocketPort),
@@ -243,7 +243,7 @@ class WorkNetNode
         }, token);
         await tcs.Task.ConfigureAwait(false);
 
-        static Neo.Consensus.Settings GetConsensusSettings(WorknetChain worknet)
+        static EpicChain.Consensus.Settings GetConsensusSettings(WorknetChain worknet)
         {
             var settings = new Dictionary<string, string>()
             {
@@ -253,7 +253,7 @@ class WorkNetNode
             };
 
             var config = new ConfigurationBuilder().AddInMemoryCollection(settings).Build();
-            return new Neo.Consensus.Settings(config.GetSection("PluginConfiguration"));
+            return new EpicChain.Consensus.Settings(config.GetSection("PluginConfiguration"));
         }
 
         static RpcServerSettings GetRpcServerSettings(WorknetChain worknet)

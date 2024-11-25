@@ -117,20 +117,6 @@ These new blocks added to the chain have *no* correlation to the blocks added to
 was branched from. From the point of the branch, the original source chain and the local branched chain
 are independent. 
 
-Neo-WorkNet comes bundled with the standard `RpcServer` module, similar to Neo-Express. This enables
-dApps to interact with the branched chain like they would with the public chain. Neo-WorkNet supports 
-both read operations like
-[`getblock`](https://docs.neo.org/docs/en-us/reference/rpc/latest-version/api/getblock.html)
-as well as write operations like 
-[`sendrawtransaction`](https://docs.neo.org/docs/en-us/reference/rpc/latest-version/api/sendrawtransaction.html).
-
-In addition to the standard `RpcServer` methods, Neo-WorkNet provides custom implementations of
-[`getapplicationlog`](https://docs.neo.org/docs/en-us/reference/rpc/latest-version/api/getapplicationlog.html),
-[`getnep11balances`](https://docs.neo.org/docs/en-us/reference/rpc/latest-version/api/getnep11balances.html),
-[`getnep11properties`](https://docs.neo.org/docs/en-us/reference/rpc/latest-version/api/getnep11properties.html)
-and [`getnep17balances`](https://docs.neo.org/docs/en-us/reference/rpc/latest-version/api/getnep17balances.html)
-from the ApplicationLogs and TokenTracker plugins (Note, the `getnep11transfers` and `getnep17transfers`)
-RPC methods are *not* supported. Additionally, Neo-WorkNet implements `ExpressShutdown` and `ExpressListContracts`
 RPC methods that are exposed by Neo-Express.
 
 ## neo-worknet wallet

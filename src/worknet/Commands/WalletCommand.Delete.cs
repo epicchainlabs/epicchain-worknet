@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.IO.Abstractions;
 using McMaster.Extensions.CommandLineUtils;
-using Neo.BlockchainToolkit.Models;
+using EpicChain.BlockchainToolkit.Models;
 
 namespace NeoWorkNet.Commands
 {

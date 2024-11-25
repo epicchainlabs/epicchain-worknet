@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AssemblyName>neonft</AssemblyName>
     <OutputType>Exe</OutputType>
-    <PackageId>Neo.Nft</PackageId>
+    <PackageId>EpicChain.Nft</PackageId>
     <PackAsTool>true</PackAsTool>
     <RootNamespace>NeoNft</RootNamespace>
     <PackageIcon />
@@ -26,7 +26,7 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <PackageReference Include="Neo.BlockchainToolkit.Library" Version="$(BlockchainToolkitLibraryVersion)" />
+        <PackageReference Include="EpicChain.BlockchainToolkit.Library" Version="$(BlockchainToolkitLibraryVersion)" />
       </ItemGroup>
     </Otherwise>
   </Choose>

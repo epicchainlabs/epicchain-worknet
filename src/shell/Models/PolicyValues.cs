@@ -1,7 +1,7 @@
 using System.Numerics;
-using Neo;
-using Neo.Json;
-using Neo.SmartContract.Native;
+using EpicChain;
+using EpicChain.Json;
+using EpicChain.SmartContract.Native;
 
 namespace NeoShell.Models
 {
@@ -17,7 +17,7 @@ namespace NeoShell.Models
 
         public JObject ToJson()
         {
-            var decimals = Neo.SmartContract.Native.NativeContract.GAS.Decimals;
+            var decimals = EpicChain.SmartContract.Native.NativeContract.GAS.Decimals;
 
             var json = new JObject();
             json[nameof(GasPerBlock)] = $"{GasPerBlock.ChangeDecimals(decimals).Value}";

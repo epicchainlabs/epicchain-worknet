@@ -1,10 +1,10 @@
 using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
-using Neo;
-using Neo.BlockchainToolkit;
-using Neo.BlockchainToolkit.Models;
-using Neo.Wallets;
+using EpicChain;
+using EpicChain.BlockchainToolkit;
+using EpicChain.BlockchainToolkit.Models;
+using EpicChain.Wallets;
 using NeoShell.Models;
 
 namespace NeoShell
@@ -65,7 +65,7 @@ namespace NeoShell
             ArgumentNullException.ThrowIfNull(@this);
 
             var keyPair = new KeyPair(@this.PrivateKey.HexToBytes());
-            var contract = Neo.SmartContract.Contract.CreateSignatureContract(keyPair.PublicKey);
+            var contract = EpicChain.SmartContract.Contract.CreateSignatureContract(keyPair.PublicKey);
             return contract.ScriptHash;
         }
 
@@ -101,7 +101,7 @@ namespace NeoShell
                     .Select(n => n.Wallet.DefaultAccount ?? throw new Exception())
                     .Select(a => new KeyPair(a.PrivateKey.HexToBytes()).PublicKey)
                     .ToArray();
-                var contract = Neo.SmartContract.Contract.CreateMultiSigContract((keys.Length * 2 / 3) + 1, keys);
+                var contract = EpicChain.SmartContract.Contract.CreateMultiSigContract((keys.Length * 2 / 3) + 1, keys);
                 accountHash = contract.ScriptHash;
                 return true;
             }

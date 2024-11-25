@@ -1,5 +1,5 @@
-using Neo.BlockchainToolkit;
-using Neo.BlockchainToolkit.Models;
+using EpicChain.BlockchainToolkit;
+using EpicChain.BlockchainToolkit.Models;
 using Newtonsoft.Json;
 
 namespace NeoWorkNet;

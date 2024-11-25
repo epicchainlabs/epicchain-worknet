@@ -1,6 +1,6 @@
 using McMaster.Extensions.CommandLineUtils;
-using Neo;
-using Neo.BlockchainToolkit.Models;
+using EpicChain;
+using EpicChain.BlockchainToolkit.Models;
 
 namespace NeoWorkNet.Commands
 {

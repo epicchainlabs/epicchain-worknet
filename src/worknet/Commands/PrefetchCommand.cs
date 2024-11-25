@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using System.IO.Abstractions;
 using McMaster.Extensions.CommandLineUtils;
-using Neo.BlockchainToolkit.Persistence;
+using EpicChain.BlockchainToolkit.Persistence;
 using NeoWorkNet.Node;
 
 namespace NeoWorkNet.Commands;

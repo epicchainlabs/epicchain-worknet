@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.IO.Abstractions;
 using McMaster.Extensions.CommandLineUtils;
-using Neo.BlockchainToolkit.Models;
-using Neo.Wallets;
+using EpicChain.BlockchainToolkit.Models;
+using EpicChain.Wallets;
 using NeoWorkNet.Node;
 
 namespace NeoWorkNet.Commands
@@ -63,7 +63,7 @@ namespace NeoWorkNet.Commands
                     try
                     {
                         var valueScriptHash = Value.ToScriptHash(chain.BranchInfo.AddressVersion);
-                        valueBytes = Neo.IO.Helper.ToArray(valueScriptHash);
+                        valueBytes = EpicChain.IO.Helper.ToArray(valueScriptHash);
                     }
                     catch (System.FormatException)
                     {

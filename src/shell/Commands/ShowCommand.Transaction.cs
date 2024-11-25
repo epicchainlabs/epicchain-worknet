@@ -29,7 +29,7 @@ namespace NeoShell.Commands
                 {
                     var (chainManager, _) = chainManagerFactory.LoadChain(chainManagerFactory.GetConnectionFilePath(Input));
                     using var expressNode = chainManager.GetNode();
-                    var (tx, log) = await expressNode.GetTransactionAsync(Neo.UInt256.Parse(TransactionHash));
+                    var (tx, log) = await expressNode.GetTransactionAsync(EpicChain.UInt256.Parse(TransactionHash));
 
                     using var writer = new JsonTextWriter(console.Out) { Formatting = Formatting.Indented };
                     await writer.WriteStartObjectAsync();

@@ -44,9 +44,9 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: shell
-        path: ./out/Neo.Shell.*.nupkg
+        path: ./out/EpicChain.Shell.*.nupkg
     - name: Upload NeoWorknet
       uses: actions/upload-artifact@v3
       with:
         name: worknet
-        path: ./out/Neo.WorkNet.*.nupkg
+        path: ./out/EpicChain.WorkNet.*.nupkg

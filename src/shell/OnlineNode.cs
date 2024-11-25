@@ -1,17 +1,17 @@
 using System.Numerics;
-using Neo;
-using Neo.BlockchainToolkit.Models;
-using Neo.Cryptography.ECC;
-using Neo.IO;
-using Neo.Json;
-using Neo.Network.P2P.Payloads;
-using Neo.Network.RPC;
-using Neo.Network.RPC.Models;
-using Neo.SmartContract;
-using Neo.SmartContract.Manifest;
-using Neo.SmartContract.Native;
-using Neo.VM;
-using Neo.Wallets;
+using EpicChain;
+using EpicChain.BlockchainToolkit.Models;
+using EpicChain.Cryptography.ECC;
+using EpicChain.IO;
+using EpicChain.Json;
+using EpicChain.Network.P2P.Payloads;
+using EpicChain.Network.RPC;
+using EpicChain.Network.RPC.Models;
+using EpicChain.SmartContract;
+using EpicChain.SmartContract.Manifest;
+using EpicChain.SmartContract.Native;
+using EpicChain.VM;
+using EpicChain.Wallets;
 using NeoShell.Commands;
 using NeoShell.Models;
 
@@ -130,7 +130,7 @@ namespace NeoShell.Node
       return rpcBlock.Block;
     }
 
-    public async Task<(Transaction tx, Neo.Network.RPC.Models.RpcApplicationLog? appLog)> GetTransactionAsync(UInt256 txHash)
+    public async Task<(Transaction tx, EpicChain.Network.RPC.Models.RpcApplicationLog? appLog)> GetTransactionAsync(UInt256 txHash)
     {
       var hash = txHash.ToString();
       var response = await rpcClient.GetRawTransactionAsync(hash).ConfigureAwait(false);

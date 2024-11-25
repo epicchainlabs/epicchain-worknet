@@ -1,7 +1,7 @@
-using Neo;
-using Neo.Json;
-using Neo.Persistence;
-using Neo.SmartContract.Native;
+using EpicChain;
+using EpicChain.Json;
+using EpicChain.Persistence;
+using EpicChain.SmartContract.Native;
 
 namespace NeoShell.Models
 {
@@ -28,7 +28,7 @@ namespace NeoShell.Models
 
         public static bool TryLoad(ProtocolSettings settings, DataCache snapshot, UInt160 scriptHash, out Nep17Contract contract)
         {
-            if (scriptHash == NativeContract.NEO.Hash)
+            if (scriptHash == NativeContract.EpicChain.Hash)
             {
                 contract = Nep17Contract.Create(NativeContract.NEO);
                 return true;

@@ -11,7 +11,7 @@
     <PackageIcon>neo-logo-72.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/ngdenterprise/neo-worknet</PackageProjectUrl>
-    <PackageTags>Neo;Blockchain;Smart Contract</PackageTags>
+    <PackageTags>EpicChain;Blockchain;Smart Contract</PackageTags>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/ngdenterprise/neo-worknet.git</RepositoryUrl>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>

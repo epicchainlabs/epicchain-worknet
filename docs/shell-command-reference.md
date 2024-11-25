@@ -68,12 +68,6 @@ Commands:
   current             Get the current connection
 ```
 
-Before using other Neo Shell commands, you must first establish a connection to the Neo N3 blockchain network you 
-want to interact with via the `connect` command. Neo Shell supports connecting to any Neo N3 blockchain network that
-provides the [JSON-RPC methods](https://docs.neo.org/docs/en-us/reference/rpc/latest-version/api.html) implemented by 
-the [RpcServer Plugin](https://docs.neo.org/docs/en-us/node/cli/config.html#installing-plugins). This includes 
-Neo-Worknet and Neo-Express. 
-
 > Note, currently, Neo Shell only supports connecting to Neo-WorkNet and Neo-Express. Support for connecting to a public
 > Neo N3 Blockchain is coming in a future update to the preview
 

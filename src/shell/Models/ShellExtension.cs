@@ -1,8 +1,8 @@
 
 using System.Diagnostics;
-using Neo;
-using Neo.Network.P2P.Payloads;
-using Neo.VM;
+using EpicChain;
+using EpicChain.Network.P2P.Payloads;
+using EpicChain.VM;
 using Newtonsoft.Json;
 
 namespace NeoShell.Models

@@ -1,7 +1,7 @@
 using System.IO.Abstractions;
-using Neo;
-using Neo.BlockchainToolkit;
-using Neo.BlockchainToolkit.Models;
+using EpicChain;
+using EpicChain.BlockchainToolkit;
+using EpicChain.BlockchainToolkit.Models;
 
 namespace NeoShell
 {
@@ -89,7 +89,7 @@ namespace NeoShell
     {
       if (!IsNodeRunning(node)) return false;
 
-      var rpcClient = new Neo.Network.RPC.RpcClient(new Uri($"http://localhost:{node.RpcPort}"), protocolSettings: ProtocolSettings);
+      var rpcClient = new EpicChain.Network.RPC.RpcClient(new Uri($"http://localhost:{node.RpcPort}"), protocolSettings: ProtocolSettings);
       var json = await rpcClient.RpcSendAsync("expressshutdown").ConfigureAwait(false);
       var processId = int.Parse(json["process-id"]!.AsString());
       var process = System.Diagnostics.Process.GetProcessById(processId);
