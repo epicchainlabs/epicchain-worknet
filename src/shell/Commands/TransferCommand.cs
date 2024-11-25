@@ -34,10 +34,10 @@ namespace NeoShell.Commands
     [Option(Description = "Optional data parameter to pass to transfer operation")]
     internal string Data { get; init; } = string.Empty;
 
-    [Option(Description = "password to use for NEP-2/NEP-6 sender")]
+    [Option(Description = "password to use for XEP-2/XEP-6 sender")]
     internal string Password { get; init; } = string.Empty;
 
-    [Option(Description = "Path to neo-express data file")]
+    [Option(Description = "Path to epicchain-express data file")]
     internal string Input { get; init; } = string.Empty;
 
     [Option(Description = "Enable contract execution tracing")]

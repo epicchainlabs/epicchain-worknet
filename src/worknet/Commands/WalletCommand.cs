@@ -2,7 +2,7 @@ using McMaster.Extensions.CommandLineUtils;
 
 namespace NeoWorkNet.Commands
 {
-    [Command("wallet", Description = "Manage neo-worknet wallets")]
+    [Command("wallet", Description = "Manage epicchain-worknet wallets")]
     [Subcommand(typeof(Create))]
     [Subcommand(typeof(Delete))]
     [Subcommand(typeof(List))]

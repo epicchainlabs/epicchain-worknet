@@ -4,7 +4,7 @@ using NeoWorkNet.Node;
 
 namespace NeoWorkNet.Commands;
 
-[Command("run", Description = "Run Neo-WorkNet instance node")]
+[Command("run", Description = "Run EpicChain-Worknet instance node")]
 partial class RunCommand
 {
     readonly IFileSystem fs;

@@ -14,7 +14,7 @@ neosh COMMAND|EXTENSION [sub-commands] [—Global flags]
 
 ## Specifying Signing and Non-Signing Accounts
 
-Many of the Neo-Express commands require the user to specify account information. In some cases, this
+Many of the EpicChain-Express commands require the user to specify account information. In some cases, this
 account is used to sign a transaction that is submitted to the blockchain network. 
 
 ### Specifying a Signing Account
@@ -22,17 +22,17 @@ account is used to sign a transaction that is submitted to the blockchain networ
 An account used for signing must have an accessible private key. Signing accounts can be specified in
 multiple ways:
 
-- Neo-Express or Worknet wallet nickname. Note, this includes `node1` etc to specify the default wallet account
+- EpicChains-Express or Worknet wallet nickname. Note, this includes `node1` etc to specify the default wallet account
   associated with each consensus node
 - A [WIF encoded](https://developer.bitcoin.org/devguide/wallets.html#wallet-import-format-wif) private key
 - A [standard NEP-2 Passphrase-protected private key](https://github.com/neo-project/proposals/blob/master/nep-2.mediawiki).
     - When using a NEP-2 protected private key, the passphrase must be specified using the `--password` option
 - The path to a [standard NEP-6 JSON wallet](https://github.com/neo-project/proposals/blob/master/nep-6.mediawiki).
     - When using a NEP-6 wallet, the password must be specified using the `--password` option. 
-    - Note, Neo-Express only supports NEP-6 wallets with either a single account or a single default account
+    - Note, EpicChains-Express only supports NEP-6 wallets with either a single account or a single default account
 
 NEP-2 private key and NEP-6 JSON wallet are password protected. When using one of these methods, the password
-can be specified using the `--password` option. If the password is not specified on the command line, Neo-Express
+can be specified using the `--password` option. If the password is not specified on the command line, EpicChain-Express
 will prompt the user to enter the password.
 
 ### Specifying a Non-Signing Account
@@ -40,7 +40,7 @@ will prompt the user to enter the password.
 A account used that is not used for signing doesn't need an accessible private key. Non-Signing accounts
 can be specified in multiple ways:
 
-- Neo-Express or Worknet wallet nickname. Note, this includes `node1` etc to specify the default wallet account
+- EpicChain-Express or Worknet wallet nickname. Note, this includes `node1` etc to specify the default wallet account
   associated with each consensus node
 - A standard Neo N3 address such as `Ne4Ko2JkzjAd8q2sasXsQCLfZ7nu8Gm5vR`
 - A [WIF encoded](https://developer.bitcoin.org/devguide/wallets.html#wallet-import-format-wif) private key
@@ -68,7 +68,7 @@ Commands:
   current             Get the current connection
 ```
 
-> Note, currently, Neo Shell only supports connecting to Neo-WorkNet and Neo-Express. Support for connecting to a public
+> Note, currently, Neo Shell only supports connecting to EpicChain-Worknet and EpicChain-Express. Support for connecting to a public
 > Neo N3 Blockchain is coming in a future update to the preview
 
 ## neosh contract 

@@ -9,7 +9,7 @@ namespace NeoWorkNet.Commands
 {
     partial class WalletCommand
     {
-        [Command("list", Description = "List neo-worknet wallets")]
+        [Command("list", Description = "List epicchain-worknet wallets")]
         internal class List
         {
             readonly IFileSystem fs;

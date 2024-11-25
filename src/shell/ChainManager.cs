@@ -34,7 +34,7 @@ namespace NeoShell
 
     static bool IsNodeRunning(ExpressConsensusNode node)
     {
-      // Check to see if there's a neo-express blockchain currently running by
+      // Check to see if there's a epicchain-express blockchain currently running by
       // attempting to open a mutex with the multisig account address for a name
 
       var account = node.Wallet.Accounts.Single(a => a.IsDefault);

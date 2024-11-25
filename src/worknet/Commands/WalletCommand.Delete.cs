@@ -7,7 +7,7 @@ namespace NeoWorkNet.Commands
 {
     partial class WalletCommand
     {
-        [Command("delete", Description = "Delete neo-worknet wallet")]
+        [Command("delete", Description = "Delete epicchain-worknet wallet")]
         internal class Delete
         {
             readonly IFileSystem fs;

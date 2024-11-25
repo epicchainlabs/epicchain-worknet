@@ -11,7 +11,7 @@ using static Crayon.Output;
 
 namespace NeoWorkNet.Commands;
 
-[Command("create", Description = "Create a Neo-Worknet branch")]
+[Command("create", Description = "Create a EpicChain-Worknet branch")]
 class CreateCommand
 {
     readonly IFileSystem fs;

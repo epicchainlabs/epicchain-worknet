@@ -220,8 +220,8 @@ namespace NeoShell
           var nep6wallet = new EpicChain.Wallets.NEP6.NEP6Wallet(path, password, settings);
           var nep6account = nep6wallet.GetAccounts().SingleOrDefault(a => a.IsDefault)
               ?? nep6wallet.GetAccounts().SingleOrDefault()
-              ?? throw new InvalidOperationException("Neo-express only supports NEP-6 wallets with a single default account or a single account");
-          if (nep6account.IsMultiSigContract()) throw new Exception("Neo-express doesn't supports multi-sig NEP-6 accounts");
+              ?? throw new InvalidOperationException("EpicChain-express only supports NEP-6 wallets with a single default account or a single account");
+          if (nep6account.IsMultiSigContract()) throw new Exception("EpicChain-express doesn't supports multi-sig NEP-6 accounts");
           var keyPair = nep6account.GetKey() ?? throw new Exception("account.GetKey() returned null");
           wallet = new DevWallet(settings, string.Empty);
           var account = wallet.CreateAccount(keyPair.PrivateKey);
